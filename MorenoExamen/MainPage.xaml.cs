@@ -44,6 +44,7 @@ namespace MorenoExamen
             }
             catch (Exception ex)
             {
+                //cargamos la excepción
                 DisplayAlert("ERROR Usuario o Contrasena dato Incorrecto", ex.Message, "OK");
             }
         }
