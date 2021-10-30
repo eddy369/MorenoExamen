@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MorenoExamen.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="30" CornerRadius="0">
+            <Label Text="LOGIN" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+        </Frame>
+        <Grid>
+            <Image Source="wallpaper.jpg" Aspect="AspectFill" Opacity="0.6"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="logo.jpg" WidthRequest="200" HeightRequest="200" Margin="0,20,0,0"/>
+
+                <StackLayout Grid.Row="1" Padding="20,20" HorizontalOptions="Center">
+                    <Entry x:Name="txtUsuario" Placeholder="Usuario" PlaceholderColor="#FF8000" FontSize="22"/>
+                    <Entry x:Name="txtContrasena" Placeholder="Contraseña" IsPassword="True" PlaceholderColor="#FF8000" FontSize="22"/>
+                    <Button x:Name="btnAbrir" Text="Iniciar Sesion" Clicked="btnAbrir_Clicked" BackgroundColor="#2196F3" TextColor="White" FontSize="22"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

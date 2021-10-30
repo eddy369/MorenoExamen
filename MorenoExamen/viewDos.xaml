@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MorenoExamen.viewDos">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="30" CornerRadius="0">
+                <Label Text="REGISTRO" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+            </Frame>
+            <Grid>
+                <Image Source="wallpaper.jpg" Aspect="AspectFill" Opacity="0.6"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Entry x:Name="txtUsuario" PlaceholderColor="Black" IsReadOnly="True" TextColor="Red" Grid.Row="0" Grid.Column="0" FontSize="22"/>
+                    <Label Text="CONECTADO" HorizontalTextAlignment="Center" TextColor="Red" Grid.Row="0" Grid.Column="1" FontSize="22"/>
+
+                    <Label Text="Registre su Nombre" TextColor="Black" Grid.Row="2" Grid.Column="0" FontSize="22"/>
+                    <Entry x:Name="txtNombre" Keyboard="Text" Grid.Row="2" Grid.Column="1" FontSize="22"/>
+                    <Label Text="Monto Inicial" TextColor="Black" Grid.Row="4" Grid.Column="0" FontSize="22"/>
+                    <Entry x:Name="txtCuotacero" Keyboard="Numeric" Grid.Row="4" Grid.Column="1" TextChanged="txtCuotacero_TextChanged" FontSize="22"/>
+                    <Label Text="Pago Mensual" TextColor="Black" Grid.Row="6" Grid.Column="0" FontSize="22"/>
+                    <Entry x:Name="txtMensualidad" Placeholder="Cuota Mensual" PlaceholderColor="Black" IsReadOnly="True" TextColor="Red" Grid.Row="6" Grid.Column="1" FontSize="22"/>
+                    <Label Text="Pago Total" TextColor="Black" Grid.Row="8" Grid.Column="0" FontSize="22"/>
+                    <Entry x:Name="txtPagar" PlaceholderColor="Black" IsReadOnly="True" TextColor="Red" Grid.Row="8" Grid.Column="1" FontSize="22"/>
+
+                    <Button x:Name="btnCalcular" Text="Resultado" Clicked="btnCalcular_Clicked" TextColor="White" BackgroundColor="Green" BorderColor="Yellow" BorderWidth="3" Grid.Row="10" Grid.Column="0" FontSize="22"/>
+                    <Button x:Name="btnGuardar" Text="Guardar" Clicked="btnGuardar_Clicked" TextColor="White" BackgroundColor="Green" BorderColor="Yellow" BorderWidth="3" Grid.Row="10" Grid.Column="1" FontSize="22"/>
+
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
